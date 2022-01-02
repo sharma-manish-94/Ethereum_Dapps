@@ -1,6 +1,6 @@
 # Ethereum_blockchain
 
-### Using Geth for EVM
+### Using Geth client
 ### Using Ganache for our local testing environment
 ### Using solidity to write smart contract
 
