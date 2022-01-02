@@ -7,28 +7,37 @@
 
 Steps:
 
-1. To start geth in light mode:
+* To start geth in light mode:
  ```sh 
     ./geth --syncmode "light"
  ```
-2. To Create and initiate a project:
+* To Create and initiate a project:
 ```sh
-    >mkdir projectDirectoryName
-    >truffle projectDirectoryName
+    >mkdir <ProjectDirectory>
+    >truffle <ProjectDirectory?
 ```
-3. To deploy a project:
+
+* To Compile contract:
+```sh
+   >truffle compile
+   >truffle compile --all --network development
+  
+ ```
+ 
+* To create javascript test cases
+```sh   
+   >truffle create test <Contract Name>
+```
+
+* To run js test cases
+```sh   
+   >truffle test
+```
+* To deploy a contract:
 ```sh   
    >truffle deploy --reset
 ```
-4. To open developer console:
+* To open developer console:
 ```sh   
    >truffle console
-```
-5. To create javascript test cases
-```sh   
-   >truffle create test SupplyChain
-```
-6. To run js test cases
-```sh   
-   >truffle test
 ```
