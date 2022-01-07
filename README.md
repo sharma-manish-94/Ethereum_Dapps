@@ -14,7 +14,7 @@ Steps:
 * To Create and initiate a project:
 ```sh
     >mkdir <ProjectDirectory>
-    >truffle <ProjectDirectory?
+    >truffle init
 ```
 
 * To Compile contract:
