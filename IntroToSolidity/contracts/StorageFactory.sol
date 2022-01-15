@@ -4,7 +4,7 @@ pragma solidity >=0.4.22 <0.9.0;
 
 import "./SimpleStorage.sol";
 
-contract StorageFactory is SimpleStorage{
+contract StorageFactory is SimpleStorage {
     SimpleStorage[] public simpleStorageArray;
 
     function createSimpleStorageContract() public {
@@ -16,16 +16,20 @@ contract StorageFactory is SimpleStorage{
         uint256 _simpleStorageIndex,
         uint256 _simpleStorageNumber
     ) public {
-        SimpleStorage _simpleStorage = 
-            SimpleStorage(address(simpleStorageArray[_simpleStorageIndex]));
-            _simpleStorage.set(_simpleStorageNumber);
+        SimpleStorage _simpleStorage = SimpleStorage(
+            address(simpleStorageArray[_simpleStorageIndex])
+        );
+        _simpleStorage.set(_simpleStorageNumber);
     }
 
-    function StorageFactoryGet(
-        uint256 _simpleStorageIndex
-    ) public view returns (uint256){
-        SimpleStorage simpleStorage = 
-            SimpleStorage(address(simpleStorageArray[_simpleStorageIndex]));
-            return simpleStorage.get();
+    function StorageFactoryGet(uint256 _simpleStorageIndex)
+        public
+        view
+        returns (uint256)
+    {
+        SimpleStorage simpleStorage = SimpleStorage(
+            address(simpleStorageArray[_simpleStorageIndex])
+        );
+        return simpleStorage.get();
     }
 }

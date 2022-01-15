@@ -8,6 +8,7 @@ contract Coin {
             return minter;
         }
     */
+
     address public minter;
 
     /*
